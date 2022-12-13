@@ -27,7 +27,7 @@
 [[Check the door.-&gt;door]]
 [[Check left side.-&gt;leftRoom]]
 [[Check right side.-&gt;rightRoom]]
-
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/home.png?raw=true?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="525,700" size="100,100">&lt;html&gt;
@@ -41,6 +41,7 @@
 (if:$introduction is 0)[](set: $introduction to 1)
 (if:$key is 0)[The door is still locked and there&#39;s nothing you can do.&lt;br&gt;[[Return.-&gt;home]]]
 (else:)[Great! you found the key, now the door can be opened![[Open the door.-&gt;end_3]]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/keyHole.png?raw=true?raw=true&quot;width=&quot;600&quot; height=&quot;600&quot;&gt;
 
 &lt;/body&gt;
 
@@ -55,8 +56,8 @@
 [Congrats! Now you successfully leave the room and can reach toilet whenever you want!
 
 GOOD END: DOOR UNLOCKER]
-
 &lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/among-us-twerk.gif?raw=true&quot;&gt;
+[(what&#39;s funny is that your own key is still missing.)]
 
 &lt;/body&gt;
 
@@ -75,6 +76,7 @@ GOOD END: DOOR UNLOCKER]
 (if:$tableLight is 1 and $leftRoom_var is 0)[[[Check your bed.-&gt;bed2]]]
 (elseif:$tableLight is 1 and $leftRoom_var is 1)[[[Check your bed.-&gt;bed1]]]
 [[Return.-&gt;home]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/LeftRoom.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="5" name="rightRoom" tags="" position="700,800" size="100,100">&lt;html&gt;
@@ -92,6 +94,7 @@ GOOD END: DOOR UNLOCKER]
 (if:$rightRoom_var is 1)[[[Check the kettle.-&gt;Kettle2]]]
 (if:$comVar1 is 1 and $comVar2 is 1)[[[give your roomate the inhaler.-&gt;GetKey]]]
 [[Return.-&gt;home]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/RightRoom.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="6" name="table" tags="" position="500,275" size="100,100">&lt;html&gt;
@@ -110,6 +113,8 @@ GOOD END: DOOR UNLOCKER]
 (if:$tableLight is 1)[[[Check your computer.-&gt;Computer]]]
 (if:$tableLight is 1)[[[Drink some water.-&gt;Water]]]
 [[Return.-&gt;leftRoom]]
+(if:$tableLight is 0)[&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/table_dark.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;]
+(if:$tableLight is 1)[&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/table_light.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;]
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="7" name="bedDark" tags="" position="675,275" size="100,100">&lt;html&gt;
@@ -121,6 +126,7 @@ GOOD END: DOOR UNLOCKER]
 &lt;body&gt;
 [It&#39;s too dark here. There&#39;s literally nothing you can see.]
 [[Return.-&gt;leftRoom]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/bed_dark.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="8" name="LightsOn" tags="" position="500,400" size="100,100">&lt;html&gt;
@@ -133,6 +139,7 @@ GOOD END: DOOR UNLOCKER]
 [Great! Now you&#39;re able to see more things.]
 (set: $tableLight to 1)
 [[Return.-&gt;table]]
+&lt;img src=&quot;https://i.redd.it/5i7d232duny31.jpg&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="9" name="Water" tags="" position="300,300" size="100,100">&lt;html&gt;
@@ -159,6 +166,7 @@ Great idea.]
 [[Check the left side.-&gt;tableL]]
 [[Check the right side.-&gt;tableR]]
 [[Return.-&gt;table]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/table_light.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="11" name="Computer" tags="" position="300,500" size="100,100">&lt;html&gt;
@@ -183,6 +191,7 @@ Great idea.]
 [This is the left side of your shelf.
 Nothing useful&#39;s here.]
 [[Return.-&gt;Shelf]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/shelf_left.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="13" name="tableR" tags="" position="175,475" size="100,100">&lt;html&gt;
@@ -197,6 +206,7 @@ Nothing useful&#39;s here.]
 [You notice that something seems to be in your kettle.]
 (if:$tableR_var is 0)[[[Check the kettle.-&gt;Kettle1]]]
 [[Return.-&gt;Shelf]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/shelf_right.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="14" name="bed1" tags="" position="850,275" size="100,100">&lt;html&gt;
@@ -210,6 +220,7 @@ Nothing useful&#39;s here.]
 [[keep moving.-&gt;bed2]]
 [[Clean it.-&gt;Clean1]]
 [[Return.-&gt;leftRoom]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/bed_trash.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="15" name="Kettle1" tags="" position="175,600" size="100,100">&lt;html&gt;
@@ -223,6 +234,7 @@ Nothing useful&#39;s here.]
 (set: $tableR_var to 1)
 (set: $comVar1 to 1)
 [[Return.-&gt;tableR]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/kettle1.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="16" name="Clean1" tags="" position="1000,275" size="100,100">&lt;html&gt;
@@ -236,7 +248,7 @@ Nothing useful&#39;s here.]
 [[Return.-&gt;leftRoom]]
 (set: $clean1 to 1)
 (if:$clean1 is 1 and $clean2 is 1 and $clean3 is 1)[[[Unlock Achievement!-&gt;Achievement]]]
-
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/bed_clean.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="17" name="bed2" tags="" position="850,400" size="100,100">&lt;html&gt;
 
 &lt;head&gt;
@@ -248,6 +260,7 @@ Nothing useful&#39;s here.]
 [[Check closet.-&gt;Closet]]
 [[Check the box below.-&gt;Box]]
 [[Return.-&gt;leftRoom]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/bed_light.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="18" name="Closet" tags="" position="1000,500" size="100,100">&lt;html&gt;
@@ -259,8 +272,9 @@ Nothing useful&#39;s here.]
 &lt;body&gt;
 [You know that the key won&#39;t be here,.]
 (if:$clean3 is 0)[But this closet of yours may be too massy.]
-(if:$clean3 is 0)[[[Clean the trash.-&gt;Clean3]]]
+(if:$clean3 is 0)[[[Make it more organized.-&gt;Clean3]]]
 [[Return.-&gt;bed2]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/closet_trash.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="19" name="Box" tags="" position="1000,400" size="100,100">&lt;html&gt;
@@ -273,6 +287,7 @@ Nothing useful&#39;s here.]
 [This is the box where you store most of your instant noodles.]
 (if:$clean2 is 0)[[[Clean the trash.-&gt;Clean2]]]
 [[Return.-&gt;bed2]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/box_trash.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="20" name="Clean2" tags="" position="1125,400" size="100,100">&lt;html&gt;
@@ -286,6 +301,7 @@ Nothing useful&#39;s here.]
 [[Return.-&gt;leftRoom]]
 (set: $clean2 to 1)
 (if:$clean1 is 1 and $clean2 is 1 and $clean3 is 1)[[[Unlock Achievement!-&gt;Achievement]]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/box_clean.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="21" name="Achievement" tags="" position="1125,625" size="100,100">&lt;html&gt;
@@ -297,7 +313,7 @@ Nothing useful&#39;s here.]
 &lt;body&gt;
 [Achievement unlocked: master dorm cleaner.
 
-Congrats! even if this does completely nothing.]
+Congrats! even if this does absolutely nothing.]
 [[Return.-&gt;home]]
 &lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/cleaner_achi.png?raw=true&quot;&gt;
 
@@ -314,6 +330,7 @@ Congrats! even if this does completely nothing.]
 (set: $clean3 to 1)
 (if:$clean1 is 1 and $clean2 is 1 and $clean3 is 1)[[[Unlock Achievement!-&gt;Achievement]]]
 [[Return.-&gt;bed2]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/closet_clean.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="23" name="hallway" tags="" position="900,800" size="100,100">&lt;html&gt;
@@ -334,6 +351,7 @@ he asked.
 Last time you saw your inhaler, it seemed to be seperated to two parts.]
 [[Keep moving.-&gt;Kettle2]]
 [[Return.-&gt;rightRoom]]
+&lt;img src=&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--EEqsTR0w--/c_imagga_scale,f_auto,fl_progressive,h_720,q_66,w_1280/https://github.com/maniflames/MicViz/blob/master/assets/mic.gif%3Fraw%3Dtrue&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="24" name="Kettle2" tags="" position="700,1000" size="100,100">&lt;html&gt;
@@ -347,6 +365,7 @@ Last time you saw your inhaler, it seemed to be seperated to two parts.]
 (if:$rightRoom_var is 0)[The kettle here seems to contain something within it.]
 (if:$rightRoom_var is 0)[[Check what&#39;s inside the kettle.-&gt;Kettle2E]]
 [[Return.-&gt;rightRoom]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/kettle2.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="25" name="Kettle2E" tags="" position="700,1125" size="100,100">&lt;html&gt;
@@ -360,6 +379,7 @@ Last time you saw your inhaler, it seemed to be seperated to two parts.]
 (set: $rightRoom_var to 1)
 (set: $comVar2 to 1)
 [[Return.-&gt;rightRoom]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/kettle2_inner.jpg?raw=true&quot;width=&quot;600&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata><tw-passagedata pid="26" name="GetKey" tags="" position="800,650" size="100,100">&lt;html&gt;
@@ -374,6 +394,7 @@ Last time you saw your inhaler, it seemed to be seperated to two parts.]
 He gives you the key.]
 (set: $key to 1)
 [[Return.-&gt;home]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/keyDark.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 &lt;/body&gt;
 
 &lt;/html&gt;</tw-passagedata></tw-storydata>
