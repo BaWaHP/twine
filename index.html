@@ -29,10 +29,9 @@ The weird smell of snacks in the air made you think this is your dorm.
 Probably that&#39;s the correct answer.
 But that&#39;s not important, you think, the first thing you need to do is get up.
 And probaly turn on the light as well, it&#39;s way too dark here.]
-
 [[Try to get up.-&gt;beginning_2]]
-
 [[end_1&lt;-Continue sleeping.]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/celling.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 
 &lt;/body&gt;
 
@@ -49,9 +48,11 @@ font-family: Arial, Helvetica, sans-serif;
 
 &lt;body&gt;
 [Cold air rushed into your body as soon as you get up.
-You feel stepping on something the moment you touched the floor..]
+You feel stepping on something the moment you touched the floor.
+But it&#39;s too dark.]
 (set: $lights_on to (random: 0, 4))
 [[Keep moving.-&gt;beginning_3]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/floor_trash_vague.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 
 &lt;/body&gt;
 
@@ -64,9 +65,9 @@ You feel stepping on something the moment you touched the floor..]
 
 &lt;body&gt;
 [You reach the switch of the light.]
-
 (if: $lights_on is 0)[[[Turn it on.-&gt;end_2]]]
 (else:)[[[Turn it on.-&gt;beginning_4]]]
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/light.png?raw=true&quot;width=&quot;800&quot; height=&quot;600&quot;&gt;
 
 &lt;/body&gt;
 
@@ -115,8 +116,8 @@ THE LUCKY END: 1/5 OF SUCCESS]
 [Oh no! the door is locked.
 This might not be a bad news two minutes ago, but all of sudden you want to go to the bathroom.
 Now you must find the key out of your room.]
-
-&lt;a href=&quot;./actual_stuff.html&quot;&gt;Come on!&lt;/a &gt;
+&lt;a href=&quot;./actual_stuff.html&quot;&gt;Oh, come on!&lt;/a &gt;
+&lt;img src=&quot;https://github.com/BaWaHP/twine/blob/main/images/question_key.gif?raw=true&quot;&gt;
 
 &lt;/body&gt;
 
